@@ -1,0 +1,24 @@
+// config and connection
+
+<?php
+    $host = "localhost";
+    $user = "root";
+    $password = "";
+    $dbname = "nashwa";
+    
+
+    $connectdb = mysqli_connect($host , $user , $password , $dbname);
+    
+
+// OR
+
+    try{
+        $conn = new PDO("mysql:host=$host;dbname=$dbname",$username,$password)
+        echo "connected to the $dbname database successfully";
+    }
+    catch(PDOException $e){
+        echo "Connection failed:".$e->getMesage();
+    }
+    
+
+?>
